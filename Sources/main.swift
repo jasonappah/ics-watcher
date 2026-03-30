@@ -200,7 +200,7 @@ class ICSWatcher {
             log("User chose to add event to calendar")
             NSWorkspace.shared.open(url)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 60.0) { [weak self] in
                 self?.trashFile(url)
             }
         } else {
